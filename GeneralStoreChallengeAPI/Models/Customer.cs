@@ -12,13 +12,13 @@ namespace GeneralStoreChallengeAPI.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public String FirstName { get; set; }
+        public string FirstName { get; set; }
         
         [Required]
-        public String LastName { get; set; }
-        
-        [Required]
-        public String FullName { get; set; }
+        public string LastName { get; set; }
+
+
+        public string FullName => $"{ this.FirstName} {this.LastName}";
 
     }
 }
