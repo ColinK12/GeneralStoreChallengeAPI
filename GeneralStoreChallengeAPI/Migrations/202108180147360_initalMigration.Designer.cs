@@ -7,13 +7,13 @@ namespace GeneralStoreChallengeAPI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitalMigration : IMigrationMetadata
+    public sealed partial class initalMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitalMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initalMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202108151959384_InitalMigration"; }
+            get { return "202108180147360_initalMigration"; }
         }
         
         string IMigrationMetadata.Source

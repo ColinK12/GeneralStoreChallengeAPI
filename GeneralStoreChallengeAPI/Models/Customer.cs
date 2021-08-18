@@ -11,7 +11,6 @@ namespace GeneralStoreChallengeAPI.Models
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey (nameof(Transaction))]
         [Required]
         public String FirstName { get; set; }
         
@@ -20,7 +19,6 @@ namespace GeneralStoreChallengeAPI.Models
         
         [Required]
         public String FullName { get; set; }
-        public virtual Transaction Transaction { get; set; }
-        public List<Transaction> transactions { get; set; }
+
     }
 }

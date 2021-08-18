@@ -11,7 +11,6 @@ namespace GeneralStoreChallengeAPI.Models
     {
         [Key]
         public string SKU { get; set; }
-        [ForeignKey (nameof(Transaction))]
 
         [Required]
         public string Name { get; set; }
