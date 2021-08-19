@@ -48,7 +48,21 @@ namespace GeneralStoreChallengeAPI.Controllers
             }
 
             return NotFound();
+        }
+        [HttpDelete]
+        public async Task<IHttpActionResult> DeleteCustomerById([FromUri] int id)
+        {
+            Customer customer = await _customersContext.Customers.FindAsync(id);
+            if (customer is null)
+                return NotFound();
 
+            _customersContext.Customers.Remove(customer);
+
+            if(await _customersContext.SaveChangesAsync() == 1)
+            {
+                return Ok("The Customer was Removed.");
+            }
+            return InternalServerError();
         }
     }
 }
