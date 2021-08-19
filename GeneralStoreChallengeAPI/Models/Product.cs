@@ -21,7 +21,6 @@ namespace GeneralStoreChallengeAPI.Models
         [Required]
         public int NumberInInventory { get; set; }
 
-        [Required]
-        public bool IsInStock { get; set; }
+        public bool IsInStock => this.NumberInInventory > 0;
     }
 }

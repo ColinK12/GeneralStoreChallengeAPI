@@ -17,9 +17,9 @@ namespace GeneralStoreChallengeAPI.Models
         public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
 
-        [Required]//ForeginKey
+        [Required]
         [ForeignKey(nameof(Product))]
-        public string ProductSKU { get; set; }
+        public string SKU { get; set; }
         public virtual Product Product { get; set; }
 
         [Required]
@@ -27,9 +27,5 @@ namespace GeneralStoreChallengeAPI.Models
 
         [Required]
         public DateTime DateOfTransaction { get; set; }
-
-        //public List<Product> Products { get; set; }
-        //public List<Customer> Customers { get; set; }
-
     }
 }
